@@ -1,0 +1,9 @@
+<h4>{{Test.Title}} {{Test.Question}}<mat-icon color="primary">{{iconResponse}}</mat-icon>
+</h4>
+<div>
+    <mat-radio-group formGroupName="radioOptions">
+        <mat-radio-button *ngFor="let solution of SolutionList" [value]="solution" (change)="changeSolution($event.value)">
+        {{solution}}
+       </mat-radio-button>
+    </mat-radio-group>
+</div>
