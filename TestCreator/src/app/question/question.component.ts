@@ -19,7 +19,7 @@ export class QuestionComponent implements OnInit {
   }
   onSolutionChange(event:any) {
     if (event.target.value != null) {
-      this.solutionChosed=event.target.value;
+      this.solutionChosed=event.target.value.toUpperCase();
       this.validResponse = (this.Test.Solution === this.solutionChosed);
       this.iconResponse = this.validResponse ? 'sentiment_very_satisfied' : 'sentiment_very_dissatisfied';
     }
