@@ -9,11 +9,13 @@ import { MatInputModule } from '@angular/material/input';
 import { QuestionComponent } from './question/question.component';
 import { SelectQuestionComponent } from './select-question/select-question.component';
 import {MatIconModule} from '@angular/material/icon';
+import { SingleSelectQuestionComponent } from './single-select-question/single-select-question.component';
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
     SelectQuestionComponent,
+    SingleSelectQuestionComponent,
   ],
   imports: [
     BrowserAnimationsModule,

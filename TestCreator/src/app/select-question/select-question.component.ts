@@ -15,6 +15,7 @@ export class SelectQuestionComponent implements OnInit {
   solutionSelected: string = null;
   questionSelected: string = null;
   iconResponse: string = null;
+  validResponse: boolean;
   ngOnInit(): void {
   }
   changeQuestion(value: string) {
@@ -26,11 +27,10 @@ export class SelectQuestionComponent implements OnInit {
     this.isCorrect();
   }
   isCorrect() {
-    let iconChosed: string = "null";
-    if (this.solutionSelected != null && this.questionSelected != null)
-      iconChosed = (this.Test.Question === this.questionSelected && this.Test.Solution === this.solutionSelected)
-        ? 'sentiment_very_satisfied' : 'sentiment_very_dissatisfied';
-    this.iconResponse = iconChosed;
+    if (this.solutionSelected != null && this.questionSelected != null) {
+      this.validResponse = (this.Test.Question === this.questionSelected && this.Test.Solution === this.solutionSelected);
+      this.iconResponse = this.validResponse ? 'sentiment_very_satisfied' : 'sentiment_very_dissatisfied';
+    }
 
   }
 

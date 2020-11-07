@@ -4,7 +4,9 @@
   </h1>
 </div>
 <input type="button" value="Empezar" (click)="shuffleExercise()" />
-<app-select-question *ngFor="let ex of exercise" [QuestionList]="questionList" [SolutionList]="solutionList" [Test]="ex"></app-select-question>
+<!-- <app-select-question *ngFor="let ex of exercise" [QuestionList]="questionList" [SolutionList]="solutionList" [Test]="ex"></app-select-question> -->
 
+<app-question *ngFor="let ex of exercise" [Test]="ex"></app-question>
+<app-single-select-question *ngFor="let ex of exercise" [SolutionList]="solutionList" [Test]="ex"></app-single-select-question>
 
 <router-outlet></router-outlet>

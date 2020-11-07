@@ -1,0 +1,10 @@
+<h4>{{Test.Title}} {{Test.Question}}<mat-icon color="primary">{{iconResponse}}</mat-icon>
+</h4>
+<mat-form-field>
+    <mat-label>Solución</mat-label>
+    <mat-select name="s" (selectionChange)="changeSolution($event.value)">
+        <mat-option *ngFor="let solution of SolutionList" value="{{ solution }}">
+            {{ solution }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

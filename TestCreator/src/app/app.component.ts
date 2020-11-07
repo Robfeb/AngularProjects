@@ -17,13 +17,13 @@ export class AppComponent implements OnInit {
 
   loadExercise() {
     this.exercise = [
-      { Id: 0, Title: 'TRADUCE: NUNCA', Question: 'NEVER', Solution: 'NUNCA' },
-      { Id: 1, Title: 'TRADUCE: SIEMPRE', Question: 'ALWAYS', Solution: 'SIEMPRE' },
-      { Id: 2, Title: 'TRADUCE: A VECES', Question: 'SOMETIMES', Solution: 'A VECES' },
-      { Id: 3, Title: 'TRADUCE: USUALLY', Question: 'USUALLY', Solution: 'DE VEZ EN CUANDO' },
-      { Id: 4, Title: 'TRADUCE: SOLEADO', Question: 'SUNNY', Solution: 'SOLEADO' },
-      { Id: 5, Title: 'TRADUCE: LLUVIOSO', Question: 'RAINY', Solution: 'LLUVIOSO' },
-      { Id: 6, Title: 'TRADUCE: NUBLADO', Question: 'CLOUDY', Solution: 'NUBLADO' },
+      { Id: 0, Title: 'TRADUCE:', Question: 'NEVER', Solution: 'NUNCA' },
+      { Id: 1, Title: 'TRADUCE:', Question: 'ALWAYS', Solution: 'SIEMPRE' },
+      { Id: 2, Title: 'TRADUCE:', Question: 'SOMETIMES', Solution: 'A VECES' },
+      { Id: 3, Title: 'TRADUCE:', Question: 'USUALLY', Solution: 'DE VEZ EN CUANDO' },
+      { Id: 4, Title: 'TRADUCE:', Question: 'SUNNY', Solution: 'SOLEADO' },
+      { Id: 5, Title: 'TRADUCE:', Question: 'RAINY', Solution: 'LLUVIOSO' },
+      { Id: 6, Title: 'TRADUCE:', Question: 'CLOUDY', Solution: 'NUBLADO' },
     ];
     this.exercise.forEach(element => {
       this.questionList.push(element.Question);
