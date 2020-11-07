@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { QuestionComponent } from './question/question.component';
+import { SelectQuestionComponent } from './select-question/select-question.component';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
+    QuestionComponent,
+    SelectQuestionComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -18,7 +22,8 @@ import { MatInputModule } from '@angular/material/input';
     AppRoutingModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

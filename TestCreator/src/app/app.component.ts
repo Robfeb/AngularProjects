@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface Test {
-  question: String;
-  solution: string;
-}
+import { Test } from './shared/models/test';
 
 @Component({
   selector: 'app-root',
@@ -21,29 +17,29 @@ export class AppComponent implements OnInit {
 
   loadExercise() {
     this.exercise = [
-      { question: 'a', solution: '1' },
-      { question: 'q', solution: '2' },
-      { question: 'q', solution: '3' },
-      { question: 'w', solution: '4' },
-      { question: 'e', solution: '5' },
-      { question: 'r', solution: '6' },
-      { question: 't', solution: '7' },
+      { Id: 0, Title: 'TRADUCE: NUNCA', Question: 'NEVER', Solution: 'NUNCA' },
+      { Id: 1, Title: 'TRADUCE: SIEMPRE', Question: 'ALWAYS', Solution: 'SIEMPRE' },
+      { Id: 2, Title: 'TRADUCE: A VECES', Question: 'SOMETIMES', Solution: 'A VECES' },
+      { Id: 3, Title: 'TRADUCE: USUALLY', Question: 'USUALLY', Solution: 'DE VEZ EN CUANDO' },
+      { Id: 4, Title: 'TRADUCE: SOLEADO', Question: 'SUNNY', Solution: 'SOLEADO' },
+      { Id: 5, Title: 'TRADUCE: LLUVIOSO', Question: 'RAINY', Solution: 'LLUVIOSO' },
+      { Id: 6, Title: 'TRADUCE: NUBLADO', Question: 'CLOUDY', Solution: 'NUBLADO' },
     ];
     this.exercise.forEach(element => {
-      this.questionList.push(element.question);
-      this.solutionList.push(element.solution);
+      this.questionList.push(element.Question);
+      this.solutionList.push(element.Solution);
     });
 
-    this.shuffleExercise(this.questionList);
-    this.shuffleExercise(this.solutionList);
-    this.loadDropdowns();
+    this.shuffleExerciseList(this.questionList);
+    this.shuffleExerciseList(this.solutionList);
   }
 
-  loadDropdowns() {
-
+  shuffleExercise() {
+    this.shuffleExerciseList(this.questionList);
+    this.shuffleExerciseList(this.solutionList);
   }
 
-  shuffleExercise(arr: String[]) {
+  shuffleExerciseList(arr: String[]) {
 
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));

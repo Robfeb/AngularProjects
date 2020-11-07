@@ -1,0 +1,17 @@
+<h4>Pregunta  {{TestId}}</h4>
+<mat-form-field>
+  <mat-label>Pregunta</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let question of QuestionList" [value]="question">
+      {{ question }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Solución</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let solution of SolutionList" [value]="solution">
+      {{ solution }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

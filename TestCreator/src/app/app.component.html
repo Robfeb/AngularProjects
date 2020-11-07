@@ -3,24 +3,8 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<input type="button" value="Empezar" onclick="shuffleExercise()" />
+<input type="button" value="Empezar" (click)="shuffleExercise()" />
+<app-select-question *ngFor="let ex of exercise" [QuestionList]="questionList" [SolutionList]="solutionList" [Test]="ex"></app-select-question>
 
-<h4>Preguntas</h4>
-<mat-form-field>
-  <mat-label>Pregunta</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let question of questionList" [value]="question">
-      {{ question }}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<mat-form-field>
-  <mat-label>Solución</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let solution of solutionList" [value]="solution">
-      {{ solution }}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
 
 <router-outlet></router-outlet>
