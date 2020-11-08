@@ -9,9 +9,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { QuestionComponent } from './question/question.component';
 import { SelectQuestionComponent } from './select-question/select-question.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { SingleSelectQuestionComponent } from './single-select-question/single-select-question.component';
 import { RadioQuestionComponent } from './radio-question/radio-question.component';
+import { CardQuestionComponent } from './card-question/card-question.component';
+import { SpellQuestionComponent } from './spell-question/spell-question.component';
+import { WordOrderQuestionComponent } from './word-order-question/word-order-question.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +23,9 @@ import { RadioQuestionComponent } from './radio-question/radio-question.componen
     SelectQuestionComponent,
     SingleSelectQuestionComponent,
     RadioQuestionComponent,
+    CardQuestionComponent,
+    SpellQuestionComponent,
+    WordOrderQuestionComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -29,7 +36,8 @@ import { RadioQuestionComponent } from './radio-question/radio-question.componen
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
