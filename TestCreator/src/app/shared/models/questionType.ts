@@ -4,5 +4,7 @@ export enum QuestionType {
     Select,
     Radio,
     Spell,
-    Card
+    Card,
+    Order,
+    CharOrder
 }

@@ -24,6 +24,13 @@
         <div *ngSwitchCase="questionType.Select">
             <app-single-select-question [SolutionList]="solutionList" [Test]="ex"></app-single-select-question>
         </div>
+        <div *ngSwitchCase="questionType.Order">
+            <app-word-order-question [Test]="ex"></app-word-order-question>
+        </div>
+        <div *ngSwitchCase="questionType.CharOrder">
+            <app-char-order-question [Test]="ex"></app-char-order-question>
+        </div>
+
         <div *ngSwitchDefault>
             <app-question [Test]="ex"></app-question>
         </div>

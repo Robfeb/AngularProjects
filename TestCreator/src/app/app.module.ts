@@ -11,11 +11,13 @@ import { QuestionComponent } from './question/question.component';
 import { SelectQuestionComponent } from './select-question/select-question.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { SingleSelectQuestionComponent } from './single-select-question/single-select-question.component';
 import { RadioQuestionComponent } from './radio-question/radio-question.component';
 import { CardQuestionComponent } from './card-question/card-question.component';
 import { SpellQuestionComponent } from './spell-question/spell-question.component';
 import { WordOrderQuestionComponent } from './word-order-question/word-order-question.component';
+import { CharOrderQuestionComponent } from './char-order-question/char-order-question.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,7 @@ import { WordOrderQuestionComponent } from './word-order-question/word-order-que
     CardQuestionComponent,
     SpellQuestionComponent,
     WordOrderQuestionComponent,
+    CharOrderQuestionComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -37,7 +40,8 @@ import { WordOrderQuestionComponent } from './word-order-question/word-order-que
     MatInputModule,
     MatIconModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

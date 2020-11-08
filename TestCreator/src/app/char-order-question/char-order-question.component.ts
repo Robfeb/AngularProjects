@@ -4,31 +4,31 @@ import { Test } from '../shared/models/test';
 import UtilsHelper from '../shared/helpers/utils-helper';
 
 @Component({
-  selector: 'app-word-order-question',
-  templateUrl: './word-order-question.component.html',
-  styleUrls: ['./word-order-question.component.css']
+  selector: 'app-char-order-question',
+  templateUrl: './char-order-question.component.html',
+  styleUrls: ['./char-order-question.component.css']
 })
+export class CharOrderQuestionComponent implements OnInit {
 
-export class WordOrderQuestionComponent implements OnInit {
   @Input() Test: Test;
   @Output()
   validResponse: boolean;
   iconResponse: string = null;
-  words: string[] = [];
+  chars: string[] = [];
 
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.words, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.chars, event.previousIndex, event.currentIndex);
     this.checkOrder();
   }
 
   checkOrder() {
-    this.validResponse = this.words.join() === this.Test.Question.split(' ').join();
+    this.validResponse = this.chars.join() === this.Test.Question.split('').join();
     this.iconResponse = this.validResponse ? 'sentiment_very_satisfied' : 'sentiment_very_dissatisfied';
   }
   constructor() { }
 
   ngOnInit(): void {
-    this.words = this.Test.Question.split(' ');
-    UtilsHelper.shuffleList(this.words);
+    this.chars = this.Test.Question.split('');
+    UtilsHelper.shuffleList(this.chars);
   }
 }
