@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionType } from './shared/models/questionType';
 import { Test } from './shared/models/test';
 
 @Component({
@@ -14,16 +15,16 @@ export class AppComponent implements OnInit {
   exercise: Test[];
   questionList: String[] = [];
   solutionList: String[] = [];
-
+  public questionType = QuestionType;
   loadExercise() {
     this.exercise = [
-      { Id: 0, Title: 'TRADUCE:', Question: 'NEVER', Solution: 'NUNCA' },
-      { Id: 1, Title: 'TRADUCE:', Question: 'ALWAYS', Solution: 'SIEMPRE' },
-      { Id: 2, Title: 'TRADUCE:', Question: 'SOMETIMES', Solution: 'A VECES' },
-      { Id: 3, Title: 'TRADUCE:', Question: 'USUALLY', Solution: 'DE VEZ EN CUANDO' },
-      { Id: 4, Title: 'TRADUCE:', Question: 'SUNNY', Solution: 'SOLEADO' },
-      { Id: 5, Title: 'TRADUCE:', Question: 'RAINY', Solution: 'LLUVIOSO' },
-      { Id: 6, Title: 'TRADUCE:', Question: 'CLOUDY', Solution: 'NUBLADO' },
+      { Id: 0, Title: 'TRADUCE:', Question: 'NUNCA', Solution: 'NEVER', Type: QuestionType.Card },
+      { Id: 1, Title: 'TRADUCE:', Question: 'SIEMPRE', Solution: 'ALWAYS', Type: QuestionType.Spell },
+      { Id: 2, Title: 'TRADUCE:', Question: 'A VECES', Solution: 'SOMETIMES', Type: QuestionType.Question },
+      { Id: 3, Title: 'TRADUCE:', Question: 'DE VEZ EN CUANDO', Solution: 'USUALLY', Type: QuestionType.Select },
+      { Id: 4, Title: 'TRADUCE:', Question: 'SOLEADO', Solution: 'SUNNY', Type: QuestionType.Spell },
+      { Id: 5, Title: 'TRADUCE:', Question: 'LLUVIOSO', Solution: 'RAINY', Type: QuestionType.Radio },
+      { Id: 6, Title: 'TRADUCE:', Question: 'NUBLADO', Solution: 'CLOUDY', Type: QuestionType.Question },
     ];
     this.exercise.forEach(element => {
       this.questionList.push(element.Question);

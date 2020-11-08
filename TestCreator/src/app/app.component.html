@@ -4,11 +4,29 @@
     </h1>
 </div>
 <input type="button" value="Empezar" (click)="shuffleExercise()" />
-<!-- <app-select-question *ngFor="let ex of exercise" [QuestionList]="questionList" [SolutionList]="solutionList" [Test]="ex"></app-select-question> -->
-<app-spell-question *ngFor="let ex of exercise" [Test]="ex"></app-spell-question>
-<app-card-question *ngFor="let ex of exercise" [Test]="ex"></app-card-question>
-<app-radio-question *ngFor="let ex of exercise" [SolutionList]="solutionList" [Test]="ex"></app-radio-question>
-<app-question *ngFor="let ex of exercise" [Test]="ex"></app-question>
-<app-single-select-question *ngFor="let ex of exercise" [SolutionList]="solutionList" [Test]="ex"></app-single-select-question>
-
+<div *ngFor="let ex of exercise">
+    <div [ngSwitch]="ex.Type">
+        <div *ngSwitchCase="questionType.Question">
+            <app-question [Test]="ex"></app-question>
+        </div>
+        <div *ngSwitchCase="questionType.SelectMultiple">
+            <app-select-question [QuestionList]="questionList" [SolutionList]="solutionList" [Test]="ex"></app-select-question>
+        </div>
+        <div *ngSwitchCase="questionType.Spell">
+            <app-spell-question [Test]="ex"></app-spell-question>
+        </div>
+        <div *ngSwitchCase="questionType.Card">
+            <app-card-question [Test]="ex"></app-card-question>
+        </div>
+        <div *ngSwitchCase="questionType.Radio">
+            <app-radio-question [SolutionList]="solutionList" [Test]="ex"></app-radio-question>
+        </div>
+        <div *ngSwitchCase="questionType.Select">
+            <app-single-select-question [SolutionList]="solutionList" [Test]="ex"></app-single-select-question>
+        </div>
+        <div *ngSwitchDefault>
+            <app-question [Test]="ex"></app-question>
+        </div>
+    </div>
+</div>
 <router-outlet></router-outlet>
