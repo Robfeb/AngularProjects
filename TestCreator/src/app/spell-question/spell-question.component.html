@@ -1,1 +1,11 @@
-<p>spell-question works!</p>
+<h4>{{Test.Title}} {{Test.Question}}
+    <mat-icon color="primary">{{iconResponse}}</mat-icon>
+</h4>
+<mat-form-field *ngFor="let char of chars;; let i = index" class="charspell" [ngClass]="{'valid':CheckChar(i), 'space':CheckSpace(i)}">
+    <ng-container *ngIf="char!==' '; else spaceChar">
+        <input matInput maxlength="1" value="" (keypress)="SetChar($event,i)">
+    </ng-container>
+    <ng-template #spaceChar>
+        <input matInput maxlength="1" value=" " disabled>
+    </ng-template>
+</mat-form-field>

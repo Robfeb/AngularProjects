@@ -1,0 +1,13 @@
+.mat-form-field-type-mat-input {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.valid {
+    color: green;
+    background-color: greenyellow;
+}
+
+.space {
+    background-color: blue;
+}

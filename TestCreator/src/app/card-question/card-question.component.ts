@@ -19,6 +19,4 @@ export class CardQuestionComponent implements OnInit {
     this.validResponse = answer;
     this.iconResponse = this.validResponse ? 'sentiment_very_satisfied' : 'sentiment_very_dissatisfied';
   }
-
-
 }
