@@ -18,6 +18,8 @@ import { CardQuestionComponent } from './card-question/card-question.component';
 import { SpellQuestionComponent } from './spell-question/spell-question.component';
 import { WordOrderQuestionComponent } from './word-order-question/word-order-question.component';
 import { CharOrderQuestionComponent } from './char-order-question/char-order-question.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ExerciseService } from './shared/services/exercise.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,9 +43,10 @@ import { CharOrderQuestionComponent } from './char-order-question/char-order-que
     MatIconModule,
     MatRadioModule,
     MatCardModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ExerciseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
