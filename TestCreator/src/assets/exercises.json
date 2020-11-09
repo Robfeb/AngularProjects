@@ -3,62 +3,62 @@
         "Title": "TRADUCE:",
         "Question": "NUNCA",
         "Solution": "NEVER",
-        "Type": "QuestionType.Card"
+        "Type": 5
     },
     {
         "Id": 1,
         "Title": "TRADUCE:",
         "Question": "SIEMPRE",
         "Solution": "ALWAYS",
-        "Type": "QuestionType.Spell"
+        "Type": 4
     },
     {
         "Id": 2,
         "Title": "TRADUCE:",
         "Question": "A VECES",
         "Solution": "SOMETIMES",
-        "Type": "QuestionType.Question"
+        "Type": 0
     },
     {
         "Id": 3,
         "Title": "TRADUCE:",
         "Question": "DE VEZ EN CUANDO",
         "Solution": "USUALLY",
-        "Type": "QuestionType.Select"
+        "Type": 2
     },
     {
         "Id": 4,
         "Title": "TRADUCE:",
         "Question": "SOLEADO",
         "Solution": "SUNNY",
-        "Type": "QuestionType.Spell"
+        "Type": 4
     },
     {
         "Id": 5,
         "Title": "TRADUCE:",
         "Question": "LLUVIOSO",
         "Solution": "RAINY",
-        "Type": "QuestionType.Radio"
+        "Type": 3
     },
     {
         "Id": 6,
         "Title": "TRADUCE:",
         "Question": "NUBLADO",
         "Solution": "CLOUDY",
-        "Type": "QuestionType.Question"
+        "Type": 0
     },
     {
         "Id": 7,
         "Title": "ORDENA:",
         "Question": "What Time is it?",
         "Solution": "What Time is it?",
-        "Type": "QuestionType.Order"
+        "Type": 6
     },
     {
         "Id": 7,
         "Title": "QUIZÁS:",
         "Question": "MAYBE",
         "Solution": "MAYBE",
-        "Type": "QuestionType.CharOrder"
+        "Type": 7
     }
 ]

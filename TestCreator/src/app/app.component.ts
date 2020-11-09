@@ -24,9 +24,12 @@ export class AppComponent implements OnInit {
   loadExercise() {
     this.exercise = [];
     this.exerciseService.fetchAvailableExercises().then((respomse: Test[]) => {
-      debugger;
       this.exercise = respomse;
+      this.extractDataFromTest();
     });
+  }
+
+  private extractDataFromTest() {
     this.exercise.forEach(element => {
       this.questionList.push(element.Question);
       this.solutionList.push(element.Solution);
