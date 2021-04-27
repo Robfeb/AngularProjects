@@ -8,6 +8,7 @@ SET env=%1
 @echo ########## Clear dist folder ##########
 if exist dist\ rd /s /q dist\%env%
 if exist dist del /f /q dist\%env%
+dir
 @echo ########## Cleared dist folder ##########
 
 SET env=%1

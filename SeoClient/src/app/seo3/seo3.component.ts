@@ -13,6 +13,7 @@ export class Seo3Component implements OnInit {
   constructor(private textService:TextService,private http: HttpClient) {}
   ngOnInit(): void {
     this.postList=this.textService.getPostList(10,13);
+    this.getData();
   }
   getData(){
     const url ='https://seoservice.azurewebsites.net/api/Seo?token=123456'
