@@ -111,8 +111,8 @@ The application uses a modular component architecture:
   ```typescript
   {
     Id: number;
-    Title: String;
-    Question: String;
+    Title: string;
+    Question: string;
     Solution: string;
     SolutionList?: string[];
     Image?: string;
