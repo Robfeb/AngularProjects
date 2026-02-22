@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TextService } from 'src/services/text.service';
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-seo2',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './seo2.component.html',
   styleUrls: ['./seo2.component.css']
 })

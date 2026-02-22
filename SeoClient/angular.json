@@ -37,12 +37,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
-                            "namedChunks": false,
-                            "aot": true,
-                            "extractLicenses": true,
-                            "vendorChunk": false,
-                            "buildOptimizer": true,
                             "budgets": [{
                                 "type": "initial",
                                 "maximumWarning": "2mb",
@@ -54,18 +48,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "SeoClient:build"
+                        "buildTarget": "SeoClient:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "SeoClient:build:production"
+                            "buildTarget": "SeoClient:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "SeoClient:build"
+                        "buildTarget": "SeoClient:build"
                     }
                 },
                 "test": {
@@ -127,6 +121,5 @@
                 }
             }
         }
-    },
-    "defaultProject": "SeoClient"
+    }
 }

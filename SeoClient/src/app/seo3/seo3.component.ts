@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TextService } from 'src/services/text.service';
 import { HttpClient } from "@angular/common/http";
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-seo3',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './seo3.component.html',
   styleUrls: ['./seo3.component.css']
 })
