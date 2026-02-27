@@ -1,5 +1,5 @@
 <h4>{{Test.Title}} {{Test.Question}}
-    <mat-icon color="primary">{{iconResponse}}</mat-icon>
+    <mat-icon color="primary" [attr.aria-label]="getIconLabel()" role="img">{{iconResponse}}</mat-icon>
 </h4>
 <mat-form-field *ngFor="let char of chars;; let i = index" class="charspell" [ngClass]="{'valid':CheckChar(i), 'space':CheckSpace(i)}">
     <ng-container *ngIf="char!==' '; else spaceChar">

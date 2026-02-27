@@ -1,4 +1,4 @@
-<h4>{{Test.Title}} {{Test.Question}}<mat-icon color="primary">{{iconResponse}}</mat-icon>
+<h4>{{Test.Title}} {{Test.Question}}<mat-icon color="primary" [attr.aria-label]="getIconLabel()" role="img">{{iconResponse}}</mat-icon>
 </h4>
 <mat-form-field>
   <input matInput placeholder="Solución" (blur)="onSolutionChange($event)">
