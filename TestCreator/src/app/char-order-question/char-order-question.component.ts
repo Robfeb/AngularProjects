@@ -31,4 +31,15 @@ export class CharOrderQuestionComponent implements OnInit {
     this.chars = this.Test.Question.split('');
     UtilsHelper.shuffleList(this.chars);
   }
+
+  getIconLabel(): string | null {
+    switch (this.iconResponse) {
+      case 'sentiment_very_satisfied':
+        return 'Correct answer';
+      case 'sentiment_very_dissatisfied':
+        return 'Incorrect answer';
+      default:
+        return null;
+    }
+  }
 }

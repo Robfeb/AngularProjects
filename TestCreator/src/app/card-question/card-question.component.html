@@ -1,5 +1,5 @@
 <div class='card-question'>
-    <mat-icon color="primary">{{iconResponse}}</mat-icon>
+    <mat-icon color="primary" [attr.aria-label]="getIconLabel()" role="img">{{iconResponse}}</mat-icon>
     <div class='flippable-card' [ngClass]="{'flipped':isFlipped}" (click)='isFlipped = !isFlipped'>
         <mat-card class=''>
             <mat-card-title>{{Test.Question}}</mat-card-title>

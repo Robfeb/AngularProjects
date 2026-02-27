@@ -31,7 +31,16 @@ export class SelectQuestionComponent implements OnInit {
       this.validResponse = (this.Test.Question === this.questionSelected && this.Test.Solution === this.solutionSelected);
       this.iconResponse = this.validResponse ? 'sentiment_very_satisfied' : 'sentiment_very_dissatisfied';
     }
-
   }
 
+  getIconLabel(): string | null {
+    switch (this.iconResponse) {
+      case 'sentiment_very_satisfied':
+        return 'Correct answer';
+      case 'sentiment_very_dissatisfied':
+        return 'Incorrect answer';
+      default:
+        return null;
+    }
+  }
 }

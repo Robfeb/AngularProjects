@@ -1,5 +1,5 @@
 <h4>{{Test.Title}}
-    <mat-icon color="primary">{{iconResponse}}</mat-icon>
+    <mat-icon color="primary" [attr.aria-label]="getIconLabel()" role="img">{{iconResponse}}</mat-icon>
     <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)" cdkDropListOrientation="horizontal">
         <div class="example-box" *ngFor="let word of words" cdkDrag>{{word}}</div>
     </div>

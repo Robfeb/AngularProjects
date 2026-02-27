@@ -63,4 +63,15 @@ export class SpellQuestionComponent implements OnInit {
     else
       element.focus();
   }
+
+  getIconLabel(): string | null {
+    switch (this.iconResponse) {
+      case 'sentiment_very_satisfied':
+        return 'Correct answer';
+      case 'sentiment_very_dissatisfied':
+        return 'Incorrect answer';
+      default:
+        return null;
+    }
+  }
 }
