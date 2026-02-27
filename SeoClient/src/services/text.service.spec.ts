@@ -72,11 +72,12 @@ describe('TextService', () => {
       expect(result.length).toBe(13);
     });
 
-    it('should update postList reference on subsequent calls', () => {
-      service.getPostList(0, 2);
-      const firstResult = service.postList;
-      service.getPostList(0, 5);
-      expect(service.postList).toBe(firstResult);
+    it('should update postList on subsequent calls', () => {
+      const firstResult = service.getPostList(0, 2);
+      expect(firstResult.length).toBe(2);
+      const secondResult = service.getPostList(0, 5);
+      expect(secondResult.length).toBe(5);
+      // postList is reassigned on each call, so values are replaced
       expect(service.postList.length).toBe(5);
     });
   });
