@@ -22,7 +22,6 @@ export class Seo1Component implements OnInit {
         "https://seoservice.azurewebsites.net/api/Seo?token=123456"
       );
       const text = await response.text();
-      console.log(text);
       this.htmlCode = text;
     })();
   }
