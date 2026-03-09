@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ["./seo1.component.css"],
 })
 export class Seo1Component implements OnInit {
-  greeting: string = "Welcome to our website!";
+  greeting: string = "Welcome to SEOClient portal";
   postList: String[] = [];
   htmlCode: String;
   constructor(private textService: TextService) {}
